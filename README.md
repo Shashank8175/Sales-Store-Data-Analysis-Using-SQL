@@ -65,44 +65,20 @@ Identified null values across important columns
 Checked for invalid or incomplete records
 
 Example:
-SELECT *
-FROM sales
-WHERE transaction_id IS NULL
-   OR customer_id IS NULL
-   OR product_name IS NULL
-   OR quantity IS NULL
-   OR price IS NULL;
+<img width="738" height="196" alt="image" src="https://github.com/user-attachments/assets/75727635-0728-4a41-9193-d7c7199c3116" />
 
 
 3. Exploratory Data Analysis (EDA)
 
 The project answers multiple business questions such as:
-
-Customer-wise purchase checks
-
-Sales distribution by gender
-
-Product category performance
-
-Time-based purchasing behavior
+-Customer-wise purchase checks
+-Sales distribution by gender
+-Product category performance
+-Time-based purchasing behavior
 
 Example: Time of day with highest purchases
-SELECT
-  CASE
-    WHEN DATEPART(HOUR, time_of_purchase) BETWEEN 0 AND 5 THEN 'NIGHT'
-    WHEN DATEPART(HOUR, time_of_purchase) BETWEEN 6 AND 11 THEN 'MORNING'
-    WHEN DATEPART(HOUR, time_of_purchase) BETWEEN 12 AND 17 THEN 'AFTERNOON'
-    WHEN DATEPART(HOUR, time_of_purchase) BETWEEN 18 AND 23 THEN 'EVENING'
-  END AS time_of_day,
-  COUNT(*) AS total_orders
-FROM sales
-GROUP BY
-  CASE
-    WHEN DATEPART(HOUR, time_of_purchase) BETWEEN 0 AND 5 THEN 'NIGHT'
-    WHEN DATEPART(HOUR, time_of_purchase) BETWEEN 6 AND 11 THEN 'MORNING'
-    WHEN DATEPART(HOUR, time_of_purchase) BETWEEN 12 AND 17 THEN 'AFTERNOON'
-    WHEN DATEPART(HOUR, time_of_purchase) BETWEEN 18 AND 23 THEN 'EVENING'
-  END;
+<img width="655" height="375" alt="image" src="https://github.com/user-attachments/assets/bb6e6a4c-848a-4a61-9181-c4fe85faf6db" />
+
 
 4. Advanced Analysis
 
@@ -111,16 +87,7 @@ Gender-based category analysis using PIVOT
 Aggregations and grouping for business insight extraction
 
 Example:
-SELECT *
-FROM (
-  SELECT product_category, gender
-  FROM sales
-) AS source_table
-PIVOT (
-  COUNT(gender)
-  FOR gender IN ([M], [F])
-) AS pivot_table
-ORDER BY product_category;
+<img width="687" height="270" alt="image" src="https://github.com/user-attachments/assets/0c393836-ab9d-46fb-a51c-4ba42e32e3c4" />
 
 
 KEY INSIGHTS (from SQL comments)
