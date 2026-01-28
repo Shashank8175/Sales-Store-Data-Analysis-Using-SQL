@@ -1,16 +1,21 @@
 # Sales-Store-Data-Analysis-Using-SQL
 
 PROJECT SUMMARY
-
+  
 This project is an end-to-end SQL data analysis case study on a retail sales dataset.
 It demonstrates how SQL is used to:
--Design a database table
--Perform data quality checks
--Explore customer and sales behavior
--Answer real business questions
--Generate insights for decision-making
--The entire analysis is written in SQL and structured as a sequence of analytical questions.
 
+Design a database table
+
+Perform data quality checks
+
+Explore customer and sales behavior
+
+Answer real business questions
+
+Generate insights for decision-making
+
+The entire analysis is written in SQL and structured as a sequence of analytical questions.
 
 BUSINESS OBJECTIVE
 
